@@ -1,0 +1,11 @@
+selecionar.php --> listagem dos cliente, botão para cadastrar um novo cliente
+
+novo.php --> formulário para cadastro de um novo cliente
+inserir.php --> realizar a inserção no BD
+
+editar.php --> formulario com os dados do cliente preenchido pronto para modificação
+atualizar.php --> realizar a atualização dos dados no BD
+
+deletar.php --> página que realiza a exclusão dos dados do cliente
+
+visualizar.php --> página com os dados de um unico cliente
