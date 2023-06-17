@@ -3,38 +3,36 @@ include "../includes/cabecalho.php";
 include "../includes/menu.php";
 include "../includes/conexao.php";
 ?>
-<h1>Módulo de Clientes</h1>
+<h1>Módulo de Produtos</h1>
 <p>
-    <a href="novo.php">Adicionar Aluno</a>
+    <a href="novo.php">Adicionar produtos</a>
 </p>
-<h2>Listagem de Clientes</h2>
+<h2>Listagem de Produtos</h2>
 <table class="table table-bordered">
     <tr class="table-secondary text-center fw-bold">
-        <td>Código</td>
+        <td>ID</td>
         <td>Nome</td>
-        <td>Senha</td>
-        <td>E-mail</td>
-        <td>Telefone</td>
-        <td>Rua</td>
-        <td>Bairro</td>
-        <td>Cidade</td>
-        <td>Ações</td>
+        <td>Descrição</td>
+        <td>Categoria</td>
+        <td>Marca</td>
+        <td>Preço</td>
+        <td>ID Produtos</td>
+
     </tr>
     <?php
-    $sql = "select * from usuario";
-    $todos_os_clientes = mysqli_query($conexao, $sql);
-    while($um_cliente = mysqli_fetch_assoc($todos_os_clientes)):
+    $sql = "select * from produto";
+    $todos_os_produtos = mysqli_query($conexao, $sql);
+    while($um_produtos = mysqli_fetch_assoc($todos_os_produtos)):
     ?>
         <tr>
-            <td><?php echo $um_cliente['id'];?></td>
-            <td><?php echo $um_cliente['nome'];?></td>
-            <td><?php echo $um_cliente['senha'];?></td>
-            <td><?php echo $um_cliente['email'];?></td>
-            <td><?php echo $um_cliente['telefone'];?></td>
-            <td><?php echo $um_cliente['rua'];?></td>
-        <td><?php echo $um_cliente['bairro'];?></td>
-        
-        <td><?php echo $um_cliente['cidade'];?></td>
+            <td><?php echo $um_produtos['id'];?></td>
+            <td><?php echo $um_produtos['nome'];?></td>
+            <td><?php echo $um_produtos['descricao'];?></td>
+            <td><?php echo $um_produtos['categoria'];?></td>
+            <td><?php echo $um_produtos['marca'];?></td>
+            <td><?php echo $um_produtos['preco'];?></td>
+            <td><?php echo $um_produtos['id_fornecedores'];?></td>
+
         <td>
             <a href="#" title="Ver Completo">Visualizar</a>
             <a href="#" title="Editar">Editar</a>
