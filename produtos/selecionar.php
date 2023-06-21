@@ -20,7 +20,7 @@ include "../includes/conexao.php";
 
     </tr>
     <?php
-    $sql = "select * from produto";
+    $sql = "select * from produtos";
     $todos_os_produtos = mysqli_query($conexao, $sql);
     while($um_produtos = mysqli_fetch_assoc($todos_os_produtos)):
     ?>
@@ -31,12 +31,12 @@ include "../includes/conexao.php";
             <td><?php echo $um_produtos['categoria'];?></td>
             <td><?php echo $um_produtos['marca'];?></td>
             <td><?php echo $um_produtos['preco'];?></td>
-            <td><?php echo $um_produtos['id_fornecedores'];?></td>
+            
 
         <td>
             <a href="#" title="Ver Completo">Visualizar</a>
             <a href="#" title="Editar">Editar</a>
-            <a href="#" title="Excluir Aluno">Excluir</a>
+            <a href="../produtos/excluir.php?id=<?php echo $um_produtos['id'];?>" title="Excluir Aluno">Excluir</a>
         </td>
         </tr>
         <?php
