@@ -34,8 +34,9 @@ include "../includes/conexao.php";
             
 
         <td>
-            <a href="#" title="Ver Completo">Visualizar</a>
-            <a href="#" title="Editar">Editar</a>
+            <a href="visualizar.php?id=<?php echo $um_produtos['id'];?>" title="Ver Completo">Visualizar</a>
+            <a href="editar.php?id=<?php
+            echo $um_produtos['id']; ?>" title="Editar">Editar</a>
             <a href="../produtos/excluir.php?id=<?php echo $um_produtos['id'];?>" title="Excluir Aluno">Excluir</a>
         </td>
         </tr>

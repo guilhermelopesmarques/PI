@@ -10,7 +10,11 @@ include "../includes/menu.php";
     descricao: <input name="descricao" required maxlength="100">
     <br>
     categoria: <input name="categoria" required maxlength="100">
-    
+    <br>
+    marca: <input name="marca" required maxlength="100">
+    <br>
+    preço: <input type="number" name="preco">
+
     <button type="submit">Salvar</button>
 </form>
 
